@@ -49,3 +49,34 @@ body{
     font-size:18px;
     line-height:1.6;
 }
+
+#music-card{
+    width:90%;
+    max-width:400px;
+    margin:20px auto;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    padding:15px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.3);
+    text-align:center;
+}
+
+#music-card h2{
+    color:white;
+    margin-bottom:15px;
+    font-size:20px;
+}
+
+#music-card video{
+    width:100%;
+    border-radius:15px;
+}
+
+#caption{
+    color:white;
+    text-align:center;
+    margin-top:20px;
+    font-size:18px;
+    line-height:1.8;
+}
