@@ -38,9 +38,15 @@
 
 </div>
 
-<a href="page5.html" class="next-btn">Read My Letter 🤍</a>
-
 <script src="script.js"></script>
 
+<script>
+const video = document.querySelector("video");
+
+video.addEventListener("ended", function () {
+    window.location.href = "page5.html";
+});
+</script>
+
 </body>
-</html>l>
+</html>
