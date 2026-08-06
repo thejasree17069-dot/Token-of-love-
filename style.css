@@ -80,3 +80,91 @@ body{
     font-size:18px;
     line-height:1.8;
 }
+
+
+/* =========================
+   PAGE 6 - FINAL HEART
+========================= */
+
+.page6{
+    margin:0;
+    overflow:hidden;
+    background:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    font-family:'Poppins',sans-serif;
+}
+
+#heart-container{
+    position:absolute;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+.love{
+    position:absolute;
+    color:#ffb6c1;
+    font-size:10px;
+    font-weight:bold;
+    white-space:nowrap;
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 5px #ff8fb1;
+    }
+    to{
+        text-shadow:0 0 15px #ff4d88;
+    }
+}
+
+.final-message{
+    position:absolute;
+    bottom:8%;
+    text-align:center;
+    color:white;
+    opacity:0;
+    animation:fadeIn 2s ease forwards;
+    animation-delay:7s;
+}
+
+.final-message h1{
+    font-size:2rem;
+    margin-bottom:10px;
+}
+
+.final-message p{
+    font-size:1rem;
+    margin-bottom:20px;
+}
+
+.final-message button{
+    padding:12px 28px;
+    border:none;
+    border-radius:30px;
+    background:#ff4d88;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.final-message button:hover{
+    transform:scale(1.08);
+    background:#ff79a8;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
