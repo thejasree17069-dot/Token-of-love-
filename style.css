@@ -82,36 +82,42 @@ body{
 }
 
 
-/* =========================
-   PAGE 6 - FINAL HEART
-========================= */
+/* ==========================
+      PAGE 6 - FINAL HEART
+========================== */
 
 .page6{
     margin:0;
+    padding:0;
     overflow:hidden;
     background:#000;
     display:flex;
     justify-content:center;
     align-items:center;
     height:100vh;
+    width:100%;
+    position:relative;
     font-family:'Poppins',sans-serif;
 }
 
 #heart-container{
     position:absolute;
+    top:0;
+    left:0;
     width:100%;
     height:100%;
     overflow:hidden;
+    z-index:1;
 }
 
 .love{
     position:absolute;
     color:#ffb6c1;
-    font-size:10px;
+    font-size:8px;
     font-weight:bold;
     white-space:nowrap;
     animation:glow 2s infinite alternate;
-    z-index:2;
+    z-index:1;
 }
 
 @keyframes glow{
@@ -125,48 +131,70 @@ body{
 
 .final-message{
     position:absolute;
-    bottom:8%;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:90%;
+    max-width:500px;
     text-align:center;
     color:white;
-    opacity:1;
-    z-index:3;
+    z-index:5;
+    animation:fadeIn 2s ease;
 }
 
 .final-message h1{
-    color: white;
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    font-size:3rem;
+    line-height:1.2;
+    margin-bottom:20px;
+    font-weight:700;
 }
 
 .final-message p{
-    color: white;
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+    font-size:1.3rem;
+    line-height:1.6;
+    margin-bottom:35px;
 }
 
 .final-message button{
-    padding:12px 28px;
+    padding:14px 35px;
     border:none;
     border-radius:30px;
     background:#ff4d88;
     color:white;
-    font-size:16px;
+    font-size:18px;
     cursor:pointer;
-    transition:.3s;
+    transition:0.3s;
 }
 
 .final-message button:hover{
-    transform:scale(1.08);
     background:#ff79a8;
+    transform:scale(1.05);
 }
 
 @keyframes fadeIn{
     from{
         opacity:0;
-        transform:translateY(20px);
+        transform:translate(-50%,-40%);
     }
+
     to{
         opacity:1;
-        transform:translateY(0);
+        transform:translate(-50%,-50%);
+    }
+}
+
+@media (max-width:600px){
+
+    .final-message h1{
+        font-size:2.3rem;
+    }
+
+    .final-message p{
+        font-size:1.1rem;
+    }
+
+    .final-message button{
+        font-size:16px;
+        padding:12px 28px;
     }
 }
