@@ -110,14 +110,16 @@ body{
     z-index:1;
 }
 
-.love{
+.love-text{
     position:absolute;
-    color:#ffb6c1;
-    font-size:8px;
-    font-weight:bold;
-    white-space:nowrap;
-    animation:glow 2s infinite alternate;
-    z-index:1;
+    top:56%;
+    left:50%;
+    transform:translateX(-50%);
+    color:white;
+    font-size:26px;
+    text-align:center;
+    line-height:1.5;
+    width:90%;
 }
 
 @keyframes glow{
