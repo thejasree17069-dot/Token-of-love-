@@ -144,14 +144,14 @@ body{
     animation:fadeIn 2s ease;
 }
 
-.final-message h1{
+.final-message
     font-size:3rem;
     line-height:1.2;
     margin-bottom:20px;
     font-weight:700;
 }
 
-.final-message p{
+.final-message
     font-size:1.3rem;
     line-height:1.6;
     margin-bottom:35px;
