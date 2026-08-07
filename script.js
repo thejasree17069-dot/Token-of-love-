@@ -27,37 +27,35 @@ function createHeart() {
 
     if (!container) return;
 
-    const scale = 14;
+    container.innerHTML = "";
 
-    for (let t = 0; t < Math.PI * 2; t += 0.05) {
+    const scale = 11;
 
-        for (let s = 2; s <= 16; s += 1.2) {
+    for (let t = 0; t < Math.PI * 2; t += 0.08) {
 
-            const x = 16 * Math.pow(Math.sin(t), 3);
-            const y = 13 * Math.cos(t)
-                    - 5 * Math.cos(2 * t)
-                    - 2 * Math.cos(3 * t)
-                    - Math.cos(4 * t);
+        const x = 16 * Math.pow(Math.sin(t), 3);
+        const y = 13 * Math.cos(t)
+                - 5 * Math.cos(2 * t)
+                - 2 * Math.cos(3 * t)
+                - Math.cos(4 * t);
 
-            const love = document.createElement("div");
-            love.className = "love";
-            love.innerText = "I love you";
+        const love = document.createElement("div");
+        love.className = "love";
+        love.innerText = "I love you";
 
-            love.style.left = (window.innerWidth / 2 + x * scale + (Math.random() * 20 - 10)) + "px";
-            love.style.top = (window.innerHeight / 2 - y * scale + (Math.random() * 20 - 10)) + "px";
+        love.style.left =
+            (window.innerWidth / 2 + x * scale) + "px";
 
-            love.style.opacity = "0";
+        love.style.top =
+            (window.innerHeight / 2 - y * scale - 120) + "px";
 
-            container.appendChild(love);
+        love.style.opacity = "0";
 
-            setTimeout(() => {
-                love.style.transition = "1.5s";
-                love.style.opacity = "1";
-            }, Math.random() * 3000);
+        container.appendChild(love);
 
-        }
-
+        setTimeout(() => {
+            love.style.transition = "1.5s";
+            love.style.opacity = "1";
+        }, Math.random() * 1500);
     }
-
 }
-
